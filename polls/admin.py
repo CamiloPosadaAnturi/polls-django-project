@@ -12,7 +12,7 @@ class QuestionAdmin(admin.ModelAdmin):#personaliza la forma en que se muestra el
     ]
     #fields = ['pub_date', 'question_text']
     # Define el orden de los campos en el admin
-    inlines = [ChoiceInline]
+    inlines = [ChoiceInline] #Dentro del admin de este modelo, también quiero ver y editar las Choices relacionadas.”
     list_display = ("question_text", "pub_date", "was_published_recently")
     list_filter = ["pub_date"]
 
