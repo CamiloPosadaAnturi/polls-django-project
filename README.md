@@ -1,20 +1,20 @@
-# 📝 Survey System (Django)
+# Survey System (Django)
 
-Un sistema de encuestas construido con **Django**, basado en el clásico ejemplo de *polls*, pero organizado de forma profesional para servir como base de proyectos reales o educativos.
-
----
-
-## aracterísticas principales
-
-- Creación y gestión de preguntas.
-- Registro de opciones de respuesta.
-- Sistema de votación funcional.
-- Visualización de resultados.
-- Panel administrativo para gestionar encuestas.
+A survey system built with **Django**, based on the classic **polling model,** but professionally organized to serve as a foundation for real-world or educational projects.
 
 ---
 
-## Tecnologías utilizadas
+## Main Features
+
+- Question creation and management.
+- Response option registration.
+- Functional voting system.
+- Results visualization.
+- Administrative panel for managing surveys.
+
+---
+
+## Technologies Used
 
 - **Python 3**
 - **Django 5**
@@ -23,7 +23,7 @@ Un sistema de encuestas construido con **Django**, basado en el clásico ejemplo
 
 ---
 
-## Estructura del proyecto
+## Project Structure
 
 ```
 project/
@@ -49,14 +49,53 @@ project/
 └── manage.py
 ```
 
-## Uso
+## Installation and execution
 
-- `http://127.0.0.1:8000/` — Página principal de encuestas  
-- `http://127.0.0.1:8000/admin/` — Administrar preguntas y opciones  
+Follow these steps to install and run the project in your local environment:
+
+### 1. Clone the repository
+
+In a folder you have already created, run the following command in the terminal:
+```
+git clone git@github.com:CamiloPosadaAnturi/polls-django-project.git
+```
+### 2. Create and activate a virtual environment
+In MAC:
+```
+python3 -m venv venv
+source venv/bin/activate
+```
+On Windows:
+```
+python -m venv venv
+venv\Scripts\activate
+```
+### Install Django
+```
+pip install django
+```
+### Apply migrations
+```
+python manage.py makemigrations
+python manage.py migrate
+```
+### Create SuperUser
+```
+python manage.py createsuperuser
+```
+### Run the server
+```
+python manage.py runserver
+```
+
+### Usage
+
+- `http://127.0.0.1:8000/` — Main survey page
+- `http://127.0.0.1:8000/admin/` — Manage questions and options
 
 ---
 
-## Tests
+### Tests
 
 ```bash
 python manage.py test
