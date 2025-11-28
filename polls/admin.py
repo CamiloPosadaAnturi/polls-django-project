@@ -16,5 +16,7 @@ class QuestionAdmin(admin.ModelAdmin):#personaliza la forma en que se muestra el
     list_display = ("question_text", "pub_date", "was_published_recently")
     list_filter = ["pub_date"]
 
+    view_on_site = True
+
 admin.site.register(Question, QuestionAdmin)
 # Registra el modelo Question con la configuracion personalizada en el admin

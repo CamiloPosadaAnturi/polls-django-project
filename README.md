@@ -23,32 +23,6 @@ A survey system built with **Django**, based on the classic **polling model,** b
 
 ---
 
-## Project Structure
-
-```
-project/
-│
-├── polls/
-│   ├── migrations/
-│   ├── static/
-│      ├──poll/ 
-│   ├── templates/
-│   │   └── polls/images
-│   ├── admin.py
-│   ├── apps.py
-│   ├── models.py
-│   ├── tests.py
-│   ├── urls.py
-│   └── views.py
-│
-├── mysite/
-│   ├── settings.py
-│   ├── urls.py
-│   └── wsgi.py
-│
-└── manage.py
-```
-
 ## Installation and execution
 
 Follow these steps to install and run the project in your local environment:
@@ -60,7 +34,6 @@ In a folder you have already created, run the following command in the terminal:
 git clone git@github.com:CamiloPosadaAnturi/polls-django-project.git
 ```
 ### 2. Create and activate a virtual environment
-In MAC:
 ```
 python3 -m venv venv
 source venv/bin/activate
@@ -70,13 +43,12 @@ On Windows:
 python -m venv venv
 venv\Scripts\activate
 ```
-### Install Django
+### Install Dependencies
 ```
-pip install django
+pip install -r requirements.txt
 ```
 ### Apply migrations
 ```
-python manage.py makemigrations
 python manage.py migrate
 ```
 ### Create SuperUser
