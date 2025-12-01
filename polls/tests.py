@@ -5,6 +5,7 @@ from django.utils import timezone
 from django.urls import reverse
 
 from .models import Question
+from polls.tests.factories import QuestionFactory
 
 def create_question(question_text, days):
     """
@@ -122,3 +123,6 @@ class QuestionDetailViewTests(TestCase):
         self.assertContains(response, past_question.question_text)
         #si la pregunta es del pasado, al intentar acceder a sus detalles muestra el texto de la pregunta
 
+def test_question_creation():
+    q = QuestionFactory()
+    assert q.id is not None #Verifica que la pregunta realmente fue guardada
