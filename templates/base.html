@@ -8,8 +8,24 @@
     <meta name="description" content="Sistema de encuestas en Django.">
     <meta name="keywords" content="encuestas, django, tutorial">
 </head>
-<body>
-{% block content %}
-{% endblock content %}
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-white shadow-sm">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-semibold text-blue-700">Sistema de Encuestas</h1>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <div class="bg-white rounded-lg shadow p-6">
+            {% block content %}
+            {% endblock content %}
+        </div>
+    </main>
+
+    <footer class="text-center py-6 text-gray-500 text-sm">
+        © 2025 Sistema de Encuestas — Desarrollado en Django
+    </footer>
+
 </body>
 </html>
